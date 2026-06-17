@@ -193,6 +193,25 @@ async function startServer() {
     res.json({ ok: true, message: `Historical scrape started (${daysBack} days)`, from_date: fromDate, to_date: toDate });
   });
 
+  // POST /api/import — bulk insert leads (manual injection)
+  app.post("/api/import", (req, res) => {
+    const leads = req.body;
+    if (!Array.isArray(leads)) {
+      return res.status(400).json({ error: "Expected array of leads" });
+    }
+    let inserted = 0;
+    let skipped = 0;
+    for (const lead of leads) {
+      try {
+        const isNew = upsertLead(lead as Record<string, string | null>);
+        if (isNew) inserted++; else skipped++;
+      } catch (e) {
+        skipped++;
+      }
+    }
+    res.json({ inserted, skipped, total: leads.length });
+  });
+
   // ── Static Frontend ──────────────────────────────────────────────────────────
   const staticPath = path.resolve(__dirname, "public");
   app.use(express.static(staticPath));
