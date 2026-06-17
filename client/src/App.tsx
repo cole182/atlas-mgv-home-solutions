@@ -13,60 +13,37 @@ import { Shield, Users, BookOpen, Flame } from "lucide-react";
 
 // ─── CLIENT CONFIG (customized per client) ───────────────────────────────────
 export const CLIENT_CONFIG = {
-  companyName: "MGV Home Solutions",
-  userEmail: "justin@mgvhomesolutions.com",
-  userPassword: "Justin1074$",
-  accentColor: "#EAB308",
+  companyName: "Residential Atlas",
+  userEmail: "iryna@residentialatlas.com",
+  userPassword: "Iryna1074$",
+  accentColor: "#7C3AED",
   counties: [
-  {
-    "name": "Nueces",
-    "state": "TX",
-    "leadTypes": [
-      "Pre-Foreclosure",
-      "Tax Delinquent",
-      "Probate",
-      "Sheriff Sale",
-      "Lis Pendens"
-    ]
-  },
-  {
-    "name": "Kleberg",
-    "state": "TX",
-    "leadTypes": [
-      "Pre-Foreclosure",
-      "Tax Delinquent",
-      "Probate"
-    ]
-  },
-  {
-    "name": "Jim Wells",
-    "state": "TX",
-    "leadTypes": [
-      "Pre-Foreclosure",
-      "Tax Delinquent"
-    ]
-  },
-  {
-    "name": "San Patricio",
-    "state": "TX",
-    "leadTypes": [
-      "Pre-Foreclosure",
-      "Tax Delinquent",
-      "Probate"
-    ]
-  },
-  {
-    "name": "Bexar",
-    "state": "TX",
-    "leadTypes": [
-      "Pre-Foreclosure",
-      "Tax Delinquent",
-      "Probate",
-      "Sheriff Sale",
-      "Lis Pendens"
-    ]
-  }
-],
+    {
+      name: "Contra Costa",
+      state: "CA",
+      leadTypes: ["Tax Delinquent", "Pre-Foreclosure", "Sheriff Sale", "Probate", "Bankruptcy", "Code Violation", "Vacant/Abandoned", "Divorce", "FSBO"],
+    },
+    {
+      name: "Alameda",
+      state: "CA",
+      leadTypes: ["Tax Delinquent", "Pre-Foreclosure", "Sheriff Sale", "Probate", "Bankruptcy", "Code Violation", "Vacant/Abandoned"],
+    },
+    {
+      name: "Santa Clara",
+      state: "CA",
+      leadTypes: ["Tax Delinquent", "Pre-Foreclosure", "Sheriff Sale", "Probate", "Bankruptcy"],
+    },
+    {
+      name: "San Mateo",
+      state: "CA",
+      leadTypes: ["Tax Delinquent", "Pre-Foreclosure", "Sheriff Sale", "Probate", "Bankruptcy"],
+    },
+    {
+      name: "Marin",
+      state: "CA",
+      leadTypes: ["Tax Delinquent", "Pre-Foreclosure", "Probate", "Bankruptcy"],
+    },
+  ],
 };
 // ─────────────────────────────────────────────────────────────────────────────
 
